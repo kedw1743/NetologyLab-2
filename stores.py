@@ -17,8 +17,7 @@ products = [
     "Пищевая сода", "Разрыхлитель", "Дрожжи", "Корица", "Мускатный орех", "Паприка", "Перец чили", "Тмин", "Орегано", "Базилик",
     "Шампунь", "Кондиционер", "Мыло", "Зубная паста", "Туалетная бумага", "Бумажные полотенца", "Алюминиевая фольга", "Пищевая плёнка", "Стиральный порошок", "Средство для мытья посуды",
     "Губки", "Мешки для мусора", "Пакеты на застёжке", "Лампочки"
-]
-products = sorted(products)
+]; products = sorted(products)
 
 
 # Функция генерации случайных цен
@@ -27,17 +26,14 @@ def generate_random_prices():
 
 
 # Создание списков для магазинов с ценами
-magnit_pl = generate_random_prices()
-magnit_pl = list(zip(products, magnit_pl))
-monetka_pl = generate_random_prices()
-monetka_pl = list(zip(products, monetka_pl))
-vkusvill_pl = generate_random_prices()
-vkusvill_pl = list(zip(products, vkusvill_pl))
+magnit_pl = generate_random_prices(); magnit_pl = list(zip(products, magnit_pl))
+monetka_pl = generate_random_prices(); monetka_pl = list(zip(products, monetka_pl))
+vkusvill_pl = generate_random_prices(); vkusvill_pl = list(zip(products, vkusvill_pl))
 
 
 # Ввод товаров от пользователя
-products_from_user = input('Введите товары, которые хотите приобрести (через запятую): ').split(", ")
-products_from_user = [product.strip() for product in products_from_user]  # Очистка от пробелов
+products_from_user = input('Введите товары ==> ').split(", ")
+products_from_user = [product.strip() for product in products_from_user]  
 
 
 def calculate_cost(store_prices, products_from_user):
